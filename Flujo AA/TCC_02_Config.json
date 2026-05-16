@@ -1,0 +1,899 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "c66c5326-e004-4190-8700-35b150293d74",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "d0a83f17-edc6-47d4-8bc2-c590007b6014",
+          "commandName": "if",
+          "packageName": "If",
+          "children": [
+            {
+              "uid": "42695fd2-f572-4c17-bfd4-114c86af6e9f",
+              "commandName": "loop.commands.start",
+              "packageName": "Loop",
+              "children": [
+                {
+                  "uid": "92b00022-c886-4bdd-bb82-f68ea28958e6",
+                  "commandName": "Comment",
+                  "packageName": "Comment",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "comment",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Se abre inicialmente el excel que contiene todas las rutas de configuración"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "9b933de8-b0cc-4775-b2eb-58ecbb112d70",
+                  "commandName": "try",
+                  "packageName": "ErrorHandler",
+                  "children": [
+                    {
+                      "uid": "7986f490-e7fb-49f9-8b71-dbe2de7fa8c4",
+                      "commandName": "OpenSpreadsheet",
+                      "packageName": "Excel_MS",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "excelSourceOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "desktopfilepath"
+                          }
+                        },
+                        {
+                          "name": "filePath",
+                          "value": {
+                            "type": "FILE",
+                            "expression": "file://$strRutaConfig$"
+                          }
+                        },
+                        {
+                          "name": "containsHeader",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "isSpecificSheet",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "fileAccessMode",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EDIT"
+                          }
+                        },
+                        {
+                          "name": "isSecure",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "loadAddIns",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "excludeHiddenSheets",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "containsChart",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "setSensitivity",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "disableUpdateLinks",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "SESSION",
+                        "sessionName": {
+                          "type": "STRING",
+                          "string": "Default"
+                        },
+                        "sessionTarget": "LOCAL"
+                      }
+                    },
+                    {
+                      "uid": "fc5cc333-0345-4b7f-abd4-ccafe543787b",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "2"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strStatus"
+                      }
+                    },
+                    {
+                      "uid": "276bf795-2c9c-44a0-9dfe-cd22173fb83e",
+                      "commandName": "loop.commands.break",
+                      "packageName": "Loop",
+                      "disabled": false,
+                      "attributes": []
+                    }
+                  ],
+                  "branches": [
+                    {
+                      "uid": "69c541e4-10dc-4d98-ba4d-db5d23d626b0",
+                      "commandName": "catch",
+                      "packageName": "ErrorHandler",
+                      "children": [
+                        {
+                          "uid": "58720c5a-9b80-4798-95bd-2bb25f794840",
+                          "commandName": "assign",
+                          "packageName": "String",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceString",
+                              "value": {
+                                "type": "STRING",
+                                "string": "1"
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "strStatus"
+                          }
+                        },
+                        {
+                          "uid": "07180595-cde9-4120-9d0a-6e1d96ba7c84",
+                          "commandName": "loop.commands.break",
+                          "packageName": "Loop",
+                          "disabled": false,
+                          "attributes": []
+                        }
+                      ],
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "exceptionType",
+                          "value": {
+                            "type": "EXCEPTION",
+                            "exceptionName": "BotException",
+                            "packageName": "ErrorHandler"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "disabled": false
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "loopType",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ITERATOR"
+                  }
+                },
+                {
+                  "name": "iterator",
+                  "attributes": [
+                    {
+                      "name": "times",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "3"
+                      }
+                    }
+                  ],
+                  "value": {
+                    "type": "ITERATOR",
+                    "iteratorName": "loop.iterators.times",
+                    "packageName": "Loop"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "b4181122-1a36-4508-99a0-2bcd512eb1fa",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "1b9d3830-c0f2-4ca7-9e48-cb267efac133",
+                  "commandName": "Comment",
+                  "packageName": "Comment",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "comment",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Se llena el diccionario con las rutas que se utilizaran durante el proceso."
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "e4478412-39ad-4876-b1e9-3f6df19718cc",
+                  "commandName": "try",
+                  "packageName": "ErrorHandler",
+                  "children": [
+                    {
+                      "uid": "1544b11b-2b7f-41ab-a1e3-da73fea689b4",
+                      "commandName": "loop.commands.start",
+                      "packageName": "Loop",
+                      "children": [
+                        {
+                          "uid": "c1cc243a-ff07-4aaa-bf46-21fb431d5ddf",
+                          "commandName": "assign",
+                          "packageName": "String",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceString",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$recConfig[1]$"
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "strTemporal"
+                          }
+                        },
+                        {
+                          "uid": "2ae3ba09-d700-489e-869d-ced54403e93b",
+                          "commandName": "put",
+                          "packageName": "Dictionary",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceMap",
+                              "value": {
+                                "type": "VARIABLE",
+                                "variableName": "dicConfig"
+                              }
+                            },
+                            {
+                              "name": "key",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$recConfig[0]$"
+                              }
+                            },
+                            {
+                              "name": "varOrManual",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Variable"
+                              }
+                            },
+                            {
+                              "name": "newValue",
+                              "value": {
+                                "type": "VARIABLE",
+                                "variableName": "strTemporal"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "loopType",
+                          "value": {
+                            "type": "STRING",
+                            "string": "ITERATOR"
+                          }
+                        },
+                        {
+                          "name": "iterator",
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "recConfig"
+                          },
+                          "attributes": [
+                            {
+                              "name": "loopSelection",
+                              "value": {
+                                "type": "STRING",
+                                "string": "ALL_ROWS"
+                              }
+                            },
+                            {
+                              "name": "readOption",
+                              "value": {
+                                "type": "STRING",
+                                "string": "READ_CELL_TEXT"
+                              }
+                            },
+                            {
+                              "name": "session",
+                              "value": {
+                                "type": "SESSION",
+                                "sessionName": {
+                                  "type": "STRING",
+                                  "string": "Default"
+                                }
+                              }
+                            }
+                          ],
+                          "value": {
+                            "type": "ITERATOR",
+                            "iteratorName": "loop.iterators.excel",
+                            "packageName": "Excel_MS"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "ee1b09e6-cb24-4254-ba32-6fb1ae3d8d50",
+                      "commandName": "CloseSpreadsheet",
+                      "packageName": "Excel_MS",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "isSave",
+                          "value": {
+                            "boolean": true,
+                            "type": "BOOLEAN"
+                          }
+                        },
+                        {
+                          "name": "session",
+                          "value": {
+                            "sessionName": {
+                              "string": "Default",
+                              "type": "STRING"
+                            },
+                            "type": "SESSION"
+                          }
+                        },
+                        {
+                          "name": "isDisplayErrorEnabled",
+                          "value": {
+                            "boolean": false,
+                            "type": "BOOLEAN"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "101dc0e7-9930-4027-a91a-1d324ef38339",
+                      "commandName": "delay",
+                      "packageName": "Delay",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "delayType",
+                          "value": {
+                            "type": "STRING",
+                            "string": "REGULAR"
+                          }
+                        },
+                        {
+                          "name": "delayTime",
+                          "value": {
+                            "type": "NUMBER",
+                            "number": "10"
+                          }
+                        },
+                        {
+                          "name": "timeUnit",
+                          "value": {
+                            "type": "STRING",
+                            "string": "SECONDS"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "f175953c-8ae2-443f-b9bd-37f1592a668c",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "2"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strStatus"
+                      }
+                    },
+                    {
+                      "uid": "0e430256-2a3e-4415-a727-1bec1df3e487",
+                      "commandName": "runTask",
+                      "packageName": "TaskBot",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "taskbot",
+                          "value": {
+                            "type": "TASKBOT",
+                            "taskbotInput": {
+                              "type": "DICTIONARY",
+                              "dictionary": [
+                                {
+                                  "key": "strStatus",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strStatus$"
+                                  }
+                                },
+                                {
+                                  "key": "dicConfig",
+                                  "value": {
+                                    "type": "DICTIONARY",
+                                    "expression": "$dicConfig$"
+                                  }
+                                },
+                                {
+                                  "key": "strMessage",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Lectura del diccionario de configuracion exitosa"
+                                  }
+                                },
+                                {
+                                  "key": "strSubtask",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$System:AATaskName$"
+                                  }
+                                }
+                              ]
+                            },
+                            "taskbotFile": {
+                              "type": "FILE",
+                              "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                            }
+                          }
+                        },
+                        {
+                          "name": "repeatOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "DO_NOT_REPEAT"
+                          }
+                        },
+                        {
+                          "name": "delayNextRepetition",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "branches": [
+                    {
+                      "uid": "8150ffe7-fbf8-41f6-bdfb-ca257e0ed0b2",
+                      "commandName": "catch",
+                      "packageName": "ErrorHandler",
+                      "children": [
+                        {
+                          "uid": "231053e9-9749-447e-9c4f-02df98cca5df",
+                          "commandName": "messageBox",
+                          "packageName": "MessageBox",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "title",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Automation Anywhere Enterprise Client"
+                              }
+                            },
+                            {
+                              "name": "content",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "Excepción inesperada en el cargue del archivo de configuraciones: $ErrorMessage$ en $System:AATaskName$ Linea $ErrorLineNumber.Number:toString$\n"
+                              }
+                            },
+                            {
+                              "name": "scrollLines",
+                              "value": {
+                                "type": "NUMBER",
+                                "number": "30"
+                              }
+                            },
+                            {
+                              "name": "closeMsgBox",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "uid": "b4098112-02e8-4fc3-8b14-b27445bb5efe",
+                          "commandName": "assign",
+                          "packageName": "String",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceString",
+                              "value": {
+                                "type": "STRING",
+                                "string": "1"
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "strStatus"
+                          }
+                        }
+                      ],
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "exceptionType",
+                          "value": {
+                            "type": "EXCEPTION",
+                            "exceptionName": "BotException",
+                            "packageName": "ErrorHandler"
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "returns": {
+                        "errorMessage": {
+                          "type": "VARIABLE",
+                          "variableName": "ErrorMessage"
+                        },
+                        "errorLineNumber": {
+                          "type": "VARIABLE",
+                          "variableName": "ErrorLineNumber"
+                        }
+                      }
+                    }
+                  ],
+                  "disabled": false
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strStatus$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": "2"
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                }
+              ]
+            }
+          ],
+          "branches": [],
+          "disabled": false,
+          "attributes": [
+            {
+              "attributes": [
+                {
+                  "name": "sourceFilePath",
+                  "value": {
+                    "type": "FILE",
+                    "expression": "file://$strRutaConfig$"
+                  }
+                },
+                {
+                  "name": "waitTimeout",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "0"
+                  }
+                }
+              ],
+              "name": "condition",
+              "value": {
+                "type": "CONDITIONAL",
+                "conditionalName": "fileExists",
+                "packageName": "File"
+              }
+            }
+          ]
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Cargue de diccionario"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "type": "NUMBER",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleNumber"
+    },
+    {
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleString"
+    },
+    {
+      "name": "strRutaConfig",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strStatus",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "recConfig",
+      "description": "",
+      "type": "RECORD",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "RECORD",
+        "record": {
+          "schema": [],
+          "values": []
+        }
+      }
+    },
+    {
+      "name": "strTemporal",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "dicConfig",
+      "description": "",
+      "type": "DICTIONARY",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "subtype": "STRING",
+      "defaultValue": {
+        "type": "DICTIONARY",
+        "dictionary": []
+      }
+    },
+    {
+      "name": "ErrorMessage",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "ErrorLineNumber",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "Comment",
+      "version": "2.17.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Delay",
+      "version": "3.10.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Dictionary",
+      "version": "3.16.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Excel_MS",
+      "version": "6.23.16",
+      "settingsAttributes": []
+    },
+    {
+      "name": "File",
+      "version": "6.14.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Loop",
+      "version": "3.10.0-20251030-061555",
+      "settingsAttributes": []
+    },
+    {
+      "name": "MessageBox",
+      "version": "3.8.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Number",
+      "version": "3.11.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Step",
+      "version": "2.7.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "System",
+      "version": "3.18.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "TaskBot",
+      "version": "2.10.0-20241119-100739",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}

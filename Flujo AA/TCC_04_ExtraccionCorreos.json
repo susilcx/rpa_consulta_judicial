@@ -1,0 +1,2844 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "f175f1ae-3875-4270-a50a-e05c9b4fa6b2",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "820e99cb-c05b-4f2f-9021-2cd2d84fa62c",
+          "commandName": "loop.commands.start",
+          "packageName": "Loop",
+          "children": [
+            {
+              "uid": "b0f5a12c-e595-468b-a80b-8370bc4e5362",
+              "commandName": "try",
+              "packageName": "ErrorHandler",
+              "children": [
+                {
+                  "uid": "079770d3-b454-48c5-a7c8-0d9c638f4c4c",
+                  "commandName": "Comment",
+                  "packageName": "Comment",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "comment",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Se conecta al outlook local de la máquina"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "2d44abba-73d9-4bbc-9cda-50415841080f",
+                  "commandName": "emailConnect",
+                  "packageName": "Email",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "session",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EmailSession"
+                      }
+                    },
+                    {
+                      "name": "serverType",
+                      "value": {
+                        "type": "STRING",
+                        "string": "OUTLOOK"
+                      }
+                    },
+                    {
+                      "name": "select",
+                      "value": {
+                        "type": "STRING",
+                        "string": "LIST"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "ec4e35d4-5e13-4282-974e-c5b10e4e0081",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "2"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strStatus"
+                  }
+                },
+                {
+                  "uid": "afd8d0a6-7ce8-4b98-96bc-edf127099fff",
+                  "commandName": "runTask",
+                  "packageName": "TaskBot",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "taskbot",
+                      "value": {
+                        "type": "TASKBOT",
+                        "taskbotInput": {
+                          "type": "DICTIONARY",
+                          "dictionary": [
+                            {
+                              "key": "strStatus",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$strStatus$"
+                              }
+                            },
+                            {
+                              "key": "dicConfig",
+                              "value": {
+                                "type": "DICTIONARY",
+                                "expression": "$dicConfig$"
+                              }
+                            },
+                            {
+                              "key": "strMessage",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Se realizó la conexión de manera exitosa al servicio de correos."
+                              }
+                            },
+                            {
+                              "key": "strSubtask",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$System:AATaskName$"
+                              }
+                            }
+                          ]
+                        },
+                        "taskbotFile": {
+                          "type": "FILE",
+                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                        }
+                      }
+                    },
+                    {
+                      "name": "repeatOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "DO_NOT_REPEAT"
+                      }
+                    },
+                    {
+                      "name": "delayNextRepetition",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "3bb75693-12c4-437d-abdc-0fbea0bf09c9",
+                  "commandName": "loop.commands.break",
+                  "packageName": "Loop",
+                  "disabled": false,
+                  "attributes": []
+                }
+              ],
+              "branches": [
+                {
+                  "uid": "df351585-58fb-454f-a11c-80003080b8ac",
+                  "commandName": "catch",
+                  "packageName": "ErrorHandler",
+                  "children": [
+                    {
+                      "uid": "9a8c8354-f6fe-4f83-9dec-a6d4d5f4657c",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "1"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strStatus"
+                      }
+                    },
+                    {
+                      "uid": "b85fbf66-1d27-4f13-a0ae-d5e8b303cb1d",
+                      "commandName": "runTask",
+                      "packageName": "TaskBot",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "taskbot",
+                          "value": {
+                            "type": "TASKBOT",
+                            "taskbotInput": {
+                              "type": "DICTIONARY",
+                              "dictionary": [
+                                {
+                                  "key": "strStatus",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strStatus$"
+                                  }
+                                },
+                                {
+                                  "key": "dicConfig",
+                                  "value": {
+                                    "type": "DICTIONARY",
+                                    "expression": "$dicConfig$"
+                                  }
+                                },
+                                {
+                                  "key": "strMessage",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. $strMensajeError$"
+                                  }
+                                },
+                                {
+                                  "key": "strLineaError",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$nmbLineaError.Number:toString$"
+                                  }
+                                },
+                                {
+                                  "key": "strSubtask",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$System:AATaskName$"
+                                  }
+                                }
+                              ]
+                            },
+                            "taskbotFile": {
+                              "type": "FILE",
+                              "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                            }
+                          }
+                        },
+                        {
+                          "name": "repeatOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "DO_NOT_REPEAT"
+                          }
+                        },
+                        {
+                          "name": "delayNextRepetition",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "7f649a1c-1a6f-48b1-94df-173346a03bbe",
+                      "commandName": "loop.commands.continue",
+                      "packageName": "Loop",
+                      "disabled": false,
+                      "attributes": []
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "exceptionType",
+                      "value": {
+                        "type": "EXCEPTION",
+                        "exceptionName": "BotException",
+                        "packageName": "ErrorHandler"
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "returns": {
+                    "errorMessage": {
+                      "type": "VARIABLE",
+                      "variableName": "strMensajeError"
+                    },
+                    "errorLineNumber": {
+                      "type": "VARIABLE",
+                      "variableName": "nmbLineaError"
+                    }
+                  }
+                }
+              ],
+              "disabled": false
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "loopType",
+              "value": {
+                "type": "STRING",
+                "string": "ITERATOR"
+              }
+            },
+            {
+              "name": "iterator",
+              "attributes": [
+                {
+                  "name": "times",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "3"
+                  }
+                }
+              ],
+              "value": {
+                "type": "ITERATOR",
+                "iteratorName": "loop.iterators.times",
+                "packageName": "Loop"
+              }
+            }
+          ]
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Conexión con correo"
+          }
+        }
+      ]
+    },
+    {
+      "uid": "fe68a3e7-c08c-4a99-96cb-0d4b43dd9804",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "91be4196-ff9d-4163-a3b4-cffc53a76b1c",
+          "commandName": "loop.commands.start",
+          "packageName": "Loop",
+          "children": [
+            {
+              "uid": "f9a15cd4-3c4e-4325-ad4d-406443143d57",
+              "commandName": "try",
+              "packageName": "ErrorHandler",
+              "children": [
+                {
+                  "uid": "fe9ead62-481d-4d1e-89e7-09e3c2577da6",
+                  "commandName": "Comment",
+                  "packageName": "Comment",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "comment",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Se saca la fecha del día actual para los procesos"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "2ebe2d4e-7788-42a3-b7d7-2248c8806d44",
+                  "commandName": "toString",
+                  "packageName": "Datetime",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "source",
+                      "value": {
+                        "type": "DATETIME",
+                        "expression": "$System:Date$"
+                      }
+                    },
+                    {
+                      "name": "selectPattern",
+                      "value": {
+                        "type": "STRING",
+                        "string": "CUSTOM"
+                      }
+                    },
+                    {
+                      "name": "patternInput",
+                      "value": {
+                        "type": "STRING",
+                        "string": "ddMMyyyy"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strFechaActual"
+                  }
+                },
+                {
+                  "uid": "c9e55a4b-67be-4943-9688-06228cce4b84",
+                  "commandName": "Comment",
+                  "packageName": "Comment",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "comment",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Recorre la bandeja de entrada en busca de correos nuevos sin leer, y que contengan de asunto PROCESO JUDICIAL"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "b1ea11aa-b8e0-45f9-8aa7-95062486e9d5",
+                  "commandName": "loop.commands.start",
+                  "packageName": "Loop",
+                  "children": [
+                    {
+                      "uid": "aee8fd24-60f1-490c-aee1-fe5dc8d8c71d",
+                      "commandName": "Comment",
+                      "packageName": "Comment",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "comment",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Se realiza la validación de que el nombre venga entre : y un . "
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "9c3a9034-ddc1-4de0-a6d1-e2db1f010e44",
+                      "commandName": "try",
+                      "packageName": "ErrorHandler",
+                      "children": [
+                        {
+                          "uid": "b5593534-41a8-4e93-8a2e-7e848f8f5116",
+                          "commandName": "beforeAfter",
+                          "packageName": "String",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceString",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$dicDetalleEmails{emailMessage}$"
+                              }
+                            },
+                            {
+                              "name": "getCharacters",
+                              "value": {
+                                "type": "STRING",
+                                "string": "BEFOREAFTER"
+                              }
+                            },
+                            {
+                              "name": "beforeStringInBeforeAfter",
+                              "value": {
+                                "type": "STRING",
+                                "string": ":"
+                              }
+                            },
+                            {
+                              "name": "beforeOccurrenceInBeforeAfter",
+                              "value": {
+                                "type": "NUMBER",
+                                "number": "1"
+                              }
+                            },
+                            {
+                              "name": "beforeAfterCondition",
+                              "value": {
+                                "type": "STRING",
+                                "string": "AND"
+                              }
+                            },
+                            {
+                              "name": "afterStringInBeforeAfter",
+                              "value": {
+                                "type": "STRING",
+                                "string": "."
+                              }
+                            },
+                            {
+                              "name": "afterOccurrenceInBeforeAfter",
+                              "value": {
+                                "type": "NUMBER",
+                                "number": "1"
+                              }
+                            },
+                            {
+                              "name": "ifNoMatchFound",
+                              "value": {
+                                "type": "STRING",
+                                "string": "EMPTY"
+                              }
+                            },
+                            {
+                              "name": "noOfCharsToGet",
+                              "value": {
+                                "type": "STRING",
+                                "string": "ALL"
+                              }
+                            },
+                            {
+                              "name": "isCaseSensitive",
+                              "value": {
+                                "type": "STRING",
+                                "string": "true"
+                              }
+                            },
+                            {
+                              "name": "trimSpaces",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": true
+                              }
+                            },
+                            {
+                              "name": "removeEnter",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": true
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "strNombreProceso"
+                          }
+                        }
+                      ],
+                      "branches": [
+                        {
+                          "uid": "b03df4dd-6c41-4a1a-9f74-577a224b61e7",
+                          "commandName": "catch",
+                          "packageName": "ErrorHandler",
+                          "children": [
+                            {
+                              "uid": "67504534-6bdc-4b94-ad9c-13eedd699f98",
+                              "commandName": "Comment",
+                              "packageName": "Comment",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "comment",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Si el nombre viene mal se envia un mensaje al usuario para que tenga en cuenta los paramentros en los que debe enviar el correo."
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "154f8f05-3f50-4a16-abee-2972dc6f10bd",
+                              "commandName": "SendMailV2",
+                              "packageName": "Email",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "toAddress",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strEmailTo}$"
+                                  }
+                                },
+                                {
+                                  "name": "cc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "bcc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "replyTO",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "invalidAddress",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "importance",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Normal"
+                                  }
+                                },
+                                {
+                                  "name": "subject",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strNombreBot}$ - $strFechaActual$"
+                                  }
+                                },
+                                {
+                                  "name": "ensureAttachmentsExist",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "bodyFormat",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "PLAINTEXT"
+                                  }
+                                },
+                                {
+                                  "name": "message",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Buen día,\n\nno se pudo extraer el nombre de la persona a consultar. \nRecuerde enviar el correo de la siguiente manera:\n\nNOMBRE A CONSULTAR: Nombres y Apellidos.\n\nEs importante terminar con el punto (.) e incluir los dos puntos (:) antes de escribir el nombre del usuario a consultar.\n\nMuchas gracias."
+                                  }
+                                },
+                                {
+                                  "name": "goGreen",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": true
+                                  }
+                                },
+                                {
+                                  "name": "serverType",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "OUTLOOK"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "b0b27ae1-b374-4dd2-91f1-29984f6b44b4",
+                              "commandName": "runTask",
+                              "packageName": "TaskBot",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "taskbot",
+                                  "value": {
+                                    "type": "TASKBOT",
+                                    "taskbotInput": {
+                                      "type": "DICTIONARY",
+                                      "dictionary": [
+                                        {
+                                          "key": "strStatus",
+                                          "value": {
+                                            "type": "STRING",
+                                            "expression": "$strStatus$"
+                                          }
+                                        },
+                                        {
+                                          "key": "dicConfig",
+                                          "value": {
+                                            "type": "DICTIONARY",
+                                            "expression": "$dicConfig$"
+                                          }
+                                        },
+                                        {
+                                          "key": "strMessage",
+                                          "value": {
+                                            "type": "STRING",
+                                            "string": "No se encontro información para realizar la búsqueda de ningún usuario."
+                                          }
+                                        },
+                                        {
+                                          "key": "strSubtask",
+                                          "value": {
+                                            "type": "STRING",
+                                            "expression": "$System:AATaskName$"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "taskbotFile": {
+                                      "type": "FILE",
+                                      "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                                    }
+                                  }
+                                },
+                                {
+                                  "name": "repeatOption",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "DO_NOT_REPEAT"
+                                  }
+                                },
+                                {
+                                  "name": "delayNextRepetition",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "continueOnError",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "4cddff9e-f78f-4883-8daf-eb0a46c6f37c",
+                              "commandName": "loop.commands.continue",
+                              "packageName": "Loop",
+                              "disabled": false,
+                              "attributes": []
+                            }
+                          ],
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "exceptionType",
+                              "value": {
+                                "type": "EXCEPTION",
+                                "exceptionName": "BotException",
+                                "packageName": "ErrorHandler"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "disabled": false
+                    },
+                    {
+                      "uid": "2a03b0eb-b43a-4179-845f-7f73e5f07ad3",
+                      "commandName": "if",
+                      "packageName": "If",
+                      "children": [
+                        {
+                          "uid": "fe0b9091-3a88-4bae-84dc-ec4ac80b6e7f",
+                          "commandName": "Comment",
+                          "packageName": "Comment",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "comment",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Si se logra extraer el nombre comienza el proceso de navegación web"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "uid": "0e593e88-2c83-4cf9-8c0c-8b1697e5d0ad",
+                          "commandName": "assign",
+                          "packageName": "String",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "sourceString",
+                              "value": {
+                                "type": "STRING",
+                                "string": "2"
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "VARIABLE",
+                            "variableName": "strStatus"
+                          }
+                        },
+                        {
+                          "uid": "4c1cc328-e5d9-4f3e-8fa2-752922aba812",
+                          "commandName": "runTask",
+                          "packageName": "TaskBot",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "taskbot",
+                              "value": {
+                                "type": "TASKBOT",
+                                "taskbotInput": {
+                                  "type": "DICTIONARY",
+                                  "dictionary": [
+                                    {
+                                      "key": "strStatus",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strStatus$"
+                                      }
+                                    },
+                                    {
+                                      "key": "dicConfig",
+                                      "value": {
+                                        "type": "DICTIONARY",
+                                        "expression": "$dicConfig$"
+                                      }
+                                    },
+                                    {
+                                      "key": "strMessage",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "Se extrajo la información para consultar al usuario: $strNombreProceso$"
+                                      }
+                                    },
+                                    {
+                                      "key": "strSubtask",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$System:AATaskName$"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "taskbotFile": {
+                                  "type": "FILE",
+                                  "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                                }
+                              }
+                            },
+                            {
+                              "name": "repeatOption",
+                              "value": {
+                                "type": "STRING",
+                                "string": "DO_NOT_REPEAT"
+                              }
+                            },
+                            {
+                              "name": "delayNextRepetition",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            },
+                            {
+                              "name": "continueOnError",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "uid": "9bbabbf7-719b-4f35-a072-3c48e3861ae8",
+                          "commandName": "runTask",
+                          "packageName": "TaskBot",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "taskbot",
+                              "value": {
+                                "type": "TASKBOT",
+                                "taskbotInput": {
+                                  "type": "DICTIONARY",
+                                  "dictionary": [
+                                    {
+                                      "key": "dicConfig",
+                                      "value": {
+                                        "type": "DICTIONARY",
+                                        "expression": "$dicConfig$"
+                                      }
+                                    },
+                                    {
+                                      "key": "strStatus",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strStatus$"
+                                      }
+                                    },
+                                    {
+                                      "key": "strNombreProceso",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strNombreProceso$"
+                                      }
+                                    },
+                                    {
+                                      "key": "strFechaActual",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strFechaActual$"
+                                      }
+                                    }
+                                  ]
+                                },
+                                "taskbotFile": {
+                                  "type": "FILE",
+                                  "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_05_NavegacionWeb"
+                                }
+                              }
+                            },
+                            {
+                              "name": "repeatOption",
+                              "value": {
+                                "type": "STRING",
+                                "string": "DO_NOT_REPEAT"
+                              }
+                            },
+                            {
+                              "name": "delayNextRepetition",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            },
+                            {
+                              "name": "continueOnError",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            }
+                          ],
+                          "returnTo": {
+                            "type": "DICTIONARY",
+                            "dictionary": [
+                              {
+                                "key": "strStatus",
+                                "value": {
+                                  "type": "VARIABLE",
+                                  "variableName": "strStatus"
+                                }
+                              },
+                              {
+                                "key": "strNombreArchivoFinal",
+                                "value": {
+                                  "type": "VARIABLE",
+                                  "variableName": "strNombreArchivoFinal"
+                                }
+                              },
+                              {
+                                "key": "strValidacionEstadoArchivo",
+                                "value": {
+                                  "type": "VARIABLE",
+                                  "variableName": "strValidacionEstadoArchivo"
+                                }
+                              },
+                              {
+                                "key": "strNumeroRadicado",
+                                "value": {
+                                  "type": "VARIABLE",
+                                  "variableName": "strNumeroRadicado"
+                                }
+                              },
+                              {
+                                "key": "strMensajeError",
+                                "value": {
+                                  "type": "VARIABLE",
+                                  "variableName": "strMensajeError"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "uid": "0f077347-15d6-45b1-b276-9a18c996b73f",
+                          "commandName": "try",
+                          "packageName": "ErrorHandler",
+                          "children": [
+                            {
+                              "uid": "5694b0b3-9ae6-4056-b98b-54d071e8d980",
+                              "commandName": "if",
+                              "packageName": "If",
+                              "children": [
+                                {
+                                  "uid": "6233d6a2-cc57-4293-9f5b-8df52d3420cb",
+                                  "commandName": "runTask",
+                                  "packageName": "TaskBot",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "taskbot",
+                                      "value": {
+                                        "type": "TASKBOT",
+                                        "taskbotInput": {
+                                          "type": "DICTIONARY",
+                                          "dictionary": [
+                                            {
+                                              "key": "strNombreProceso",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strNombreProceso$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strRegistro",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strNumeroRadicado$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strFechaActual",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strFechaActual$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strDescripcion",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strMensajeError$"
+                                              }
+                                            },
+                                            {
+                                              "key": "dicConfig",
+                                              "value": {
+                                                "type": "DICTIONARY",
+                                                "expression": "$dicConfig$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strStatus",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strStatus$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strCorreoEnviadoPor",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$dicDetalleEmails{emailFrom}$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strValidacionEstadoArchivo",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strValidacionEstadoArchivo$"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        "taskbotFile": {
+                                          "type": "FILE",
+                                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_06_RegistroControlInterno"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "name": "repeatOption",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "DO_NOT_REPEAT"
+                                      }
+                                    },
+                                    {
+                                      "name": "delayNextRepetition",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "continueOnError",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "uid": "a43e4998-b9c6-4d0b-8f62-cba8a4be9cfd",
+                                  "commandName": "throw",
+                                  "packageName": "ErrorHandler",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "message",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strMensajeError$"
+                                      }
+                                    },
+                                    {
+                                      "name": "exceptionType",
+                                      "value": {
+                                        "type": "EXCEPTION",
+                                        "exceptionName": "BotException",
+                                        "packageName": "ErrorHandler"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "branches": [],
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "attributes": [
+                                    {
+                                      "name": "variable",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strStatus$"
+                                      }
+                                    },
+                                    {
+                                      "name": "operator",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "EQ"
+                                      }
+                                    },
+                                    {
+                                      "name": "value",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "1"
+                                      }
+                                    },
+                                    {
+                                      "name": "matchCase",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "isIgnoreCarriage",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ],
+                                  "name": "condition",
+                                  "value": {
+                                    "type": "CONDITIONAL",
+                                    "conditionalName": "stringVariable",
+                                    "packageName": "String"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "branches": [
+                            {
+                              "uid": "f7ebab33-3f2e-4917-ad6a-cf56b2f07025",
+                              "commandName": "catch",
+                              "packageName": "ErrorHandler",
+                              "children": [
+                                {
+                                  "uid": "c120b60c-7d40-4471-8c3e-a50d7a18294b",
+                                  "commandName": "SendMailV2",
+                                  "packageName": "Email",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "toAddress",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strEmailTo}$"
+                                      }
+                                    },
+                                    {
+                                      "name": "cc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "bcc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "replyTO",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "invalidAddress",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "importance",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "Normal"
+                                      }
+                                    },
+                                    {
+                                      "name": "subject",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strNombreBot}$$strNombreProceso$ - $strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "ensureAttachmentsExist",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "bodyFormat",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "PLAINTEXT"
+                                      }
+                                    },
+                                    {
+                                      "name": "message",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "Buen día,\n\nse informa que para el usuario: $strNombreProceso$ ha ocurrido un error en la descarga. \nContactese con el administrador del bot para conocer más detalle.\n\n\nMuchas gracias.\n$strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "goGreen",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "serverType",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "OUTLOOK"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "uid": "579db861-4c87-40f5-8590-f25a9385e4d4",
+                                  "commandName": "runTask",
+                                  "packageName": "TaskBot",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "taskbot",
+                                      "value": {
+                                        "type": "TASKBOT",
+                                        "taskbotInput": {
+                                          "type": "DICTIONARY",
+                                          "dictionary": [
+                                            {
+                                              "key": "strStatus",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$strStatus$"
+                                              }
+                                            },
+                                            {
+                                              "key": "dicConfig",
+                                              "value": {
+                                                "type": "DICTIONARY",
+                                                "expression": "$dicConfig$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strMessage",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. $strMensajeError$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strLineaError",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$nmbLineaError.Number:toString$"
+                                              }
+                                            },
+                                            {
+                                              "key": "strSubtask",
+                                              "value": {
+                                                "type": "STRING",
+                                                "expression": "$System:AATaskName$"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        "taskbotFile": {
+                                          "type": "FILE",
+                                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "name": "repeatOption",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "DO_NOT_REPEAT"
+                                      }
+                                    },
+                                    {
+                                      "name": "delayNextRepetition",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "continueOnError",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "uid": "457575ba-830a-4de7-9cc2-51ad669b07c5",
+                                  "commandName": "loop.commands.continue",
+                                  "packageName": "Loop",
+                                  "disabled": false,
+                                  "attributes": []
+                                }
+                              ],
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "exceptionType",
+                                  "value": {
+                                    "type": "EXCEPTION",
+                                    "exceptionName": "BotException",
+                                    "packageName": "ErrorHandler"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "disabled": false
+                        },
+                        {
+                          "uid": "33bf9b12-f3c1-470f-b1c4-d5cd5231e2d7",
+                          "commandName": "Comment",
+                          "packageName": "Comment",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "comment",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Validación interna del archivo. 0 para decir que la consulta fue exitosa pero no se encontraron registros, 1 para decir que se encontraron registros, 2 para decir que hubo un error en el proceso de descarga"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "uid": "219d7325-da4b-47f2-8a9c-55f34861562a",
+                          "commandName": "Comment",
+                          "packageName": "Comment",
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "name": "comment",
+                              "value": {
+                                "type": "STRING",
+                                "string": "Se envia correo según la validación interna"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "uid": "c6662cd6-0474-4664-98ef-99c4f2aebab6",
+                          "commandName": "if",
+                          "packageName": "If",
+                          "children": [
+                            {
+                              "uid": "76ba8e67-7cef-4a63-888e-3bf34f2a5cf1",
+                              "commandName": "SendMailV2",
+                              "packageName": "Email",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "toAddress",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strEmailTo}$"
+                                  }
+                                },
+                                {
+                                  "name": "cc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "bcc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "replyTO",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "invalidAddress",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "importance",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Normal"
+                                  }
+                                },
+                                {
+                                  "name": "subject",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strNombreBot}$$strNombreProceso$ - $strFechaActual$"
+                                  }
+                                },
+                                {
+                                  "name": "ensureAttachmentsExist",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "bodyFormat",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "PLAINTEXT"
+                                  }
+                                },
+                                {
+                                  "name": "message",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "Buen día,\n\nSe informa que para el usuario: $strNombreProceso$ no se encontro ningún registro.\n\nMuchas gracias.\n$strFechaActual$\n"
+                                  }
+                                },
+                                {
+                                  "name": "goGreen",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": true
+                                  }
+                                },
+                                {
+                                  "name": "serverType",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "OUTLOOK"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "branches": [
+                            {
+                              "uid": "71c6eef6-8e51-48c4-8cce-d5f1f9d54cca",
+                              "commandName": "elseIf",
+                              "packageName": "If",
+                              "children": [
+                                {
+                                  "uid": "53ae18f6-daf5-41b8-92fc-3089d0d23452",
+                                  "commandName": "SendMailV2",
+                                  "packageName": "Email",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "toAddress",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strEmailTo}$"
+                                      }
+                                    },
+                                    {
+                                      "name": "cc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "bcc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "replyTO",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "invalidAddress",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "importance",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "Normal"
+                                      }
+                                    },
+                                    {
+                                      "name": "subject",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strNombreBot}$$strNombreProceso$ - $strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "fileList",
+                                      "value": {
+                                        "type": "LIST",
+                                        "list": [
+                                          {
+                                            "type": "FILE",
+                                            "expression": "file://$strNombreArchivoFinal$"
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "name": "ensureAttachmentsExist",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "bodyFormat",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "PLAINTEXT"
+                                      }
+                                    },
+                                    {
+                                      "name": "message",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "Buen día,\n\nse informa que para el usuario: $strNombreProceso$ se encontro el registro correspondiente.\nSe adjunta el documento para su revisión.\n\n Muchas gracias.\n  $strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "goGreen",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "serverType",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "OUTLOOK"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "uid": "dfd6c92d-ba2f-4502-b04b-63f5bbc70a62",
+                                  "commandName": "deleteFiles",
+                                  "packageName": "File",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "filePath",
+                                      "value": {
+                                        "type": "FILE",
+                                        "expression": "file://$strNombreArchivoFinal$"
+                                      }
+                                    },
+                                    {
+                                      "name": "isParallelDelete",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "isSize",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "isDate",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "attributes": [
+                                    {
+                                      "name": "variable",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strValidacionEstadoArchivo$"
+                                      }
+                                    },
+                                    {
+                                      "name": "operator",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "EQ"
+                                      }
+                                    },
+                                    {
+                                      "name": "value",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "1"
+                                      }
+                                    },
+                                    {
+                                      "name": "matchCase",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "isIgnoreCarriage",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ],
+                                  "name": "condition",
+                                  "value": {
+                                    "type": "CONDITIONAL",
+                                    "conditionalName": "stringVariable",
+                                    "packageName": "String"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "7fa3f40e-0717-4ca3-b62f-0f0965a43c25",
+                              "commandName": "elseIf",
+                              "packageName": "If",
+                              "children": [
+                                {
+                                  "uid": "cf79fe95-cf78-4558-a1de-9b025ad0204f",
+                                  "commandName": "SendMailV2",
+                                  "packageName": "Email",
+                                  "disabled": false,
+                                  "attributes": [
+                                    {
+                                      "name": "toAddress",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strEmailTo}$"
+                                      }
+                                    },
+                                    {
+                                      "name": "cc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "bcc",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "replyTO",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": ""
+                                      }
+                                    },
+                                    {
+                                      "name": "invalidAddress",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "importance",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "Normal"
+                                      }
+                                    },
+                                    {
+                                      "name": "subject",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$dicConfig{strNombreBot}$$strNombreProceso$ - $strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "ensureAttachmentsExist",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    },
+                                    {
+                                      "name": "bodyFormat",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "PLAINTEXT"
+                                      }
+                                    },
+                                    {
+                                      "name": "message",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "Buen día,\n\nse informa que para el usuario: $strNombreProceso$ ha ocurrido un error en la descarga. \nContactese con el administrador del bot para conocer más detalle.\n\n\nMuchas gracias.\n$strFechaActual$"
+                                      }
+                                    },
+                                    {
+                                      "name": "goGreen",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "serverType",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "OUTLOOK"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ],
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "attributes": [
+                                    {
+                                      "name": "variable",
+                                      "value": {
+                                        "type": "STRING",
+                                        "expression": "$strValidacionEstadoArchivo$"
+                                      }
+                                    },
+                                    {
+                                      "name": "operator",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "EQ"
+                                      }
+                                    },
+                                    {
+                                      "name": "value",
+                                      "value": {
+                                        "type": "STRING",
+                                        "string": "2"
+                                      }
+                                    },
+                                    {
+                                      "name": "matchCase",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": true
+                                      }
+                                    },
+                                    {
+                                      "name": "isIgnoreCarriage",
+                                      "value": {
+                                        "type": "BOOLEAN",
+                                        "boolean": false
+                                      }
+                                    }
+                                  ],
+                                  "name": "condition",
+                                  "value": {
+                                    "type": "CONDITIONAL",
+                                    "conditionalName": "stringVariable",
+                                    "packageName": "String"
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "disabled": false,
+                          "attributes": [
+                            {
+                              "attributes": [
+                                {
+                                  "name": "variable",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strValidacionEstadoArchivo$"
+                                  }
+                                },
+                                {
+                                  "name": "operator",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "EQ"
+                                  }
+                                },
+                                {
+                                  "name": "value",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "0"
+                                  }
+                                },
+                                {
+                                  "name": "matchCase",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": true
+                                  }
+                                },
+                                {
+                                  "name": "isIgnoreCarriage",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                }
+                              ],
+                              "name": "condition",
+                              "value": {
+                                "type": "CONDITIONAL",
+                                "conditionalName": "stringVariable",
+                                "packageName": "String"
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "branches": [
+                        {
+                          "uid": "531418b2-3325-4fd6-92e2-9e5633911640",
+                          "commandName": "else",
+                          "packageName": "If",
+                          "children": [
+                            {
+                              "uid": "83a72c43-d23a-4a05-974c-6e4bcf359fb7",
+                              "commandName": "Comment",
+                              "packageName": "Comment",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "comment",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Si el proceso encuentra el nombre en blanco lanza un mensaje donde le explica al usuario como enviar el correo"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "c8449931-3d9e-4a24-9781-1df15a9977a5",
+                              "commandName": "SendMailV2",
+                              "packageName": "Email",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "toAddress",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strEmailTo}$"
+                                  }
+                                },
+                                {
+                                  "name": "cc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "bcc",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "replyTO",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": ""
+                                  }
+                                },
+                                {
+                                  "name": "invalidAddress",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "importance",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Normal"
+                                  }
+                                },
+                                {
+                                  "name": "subject",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicConfig{strNombreBot}$$strNombreProceso$ - $strFechaActual$"
+                                  }
+                                },
+                                {
+                                  "name": "ensureAttachmentsExist",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "bodyFormat",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "PLAINTEXT"
+                                  }
+                                },
+                                {
+                                  "name": "message",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "Buen día,\n\nno se pudo extraer el nombre de la persona a consultar. \nRecuerde enviar el correo de la siguiente manera:\n\nNOMBRE A CONSULTAR: Nombres y Apellidos.\n\nEs importante terminar con el punto (.)\n\nMuchas gracias."
+                                  }
+                                },
+                                {
+                                  "name": "goGreen",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": true
+                                  }
+                                },
+                                {
+                                  "name": "serverType",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "OUTLOOK"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "uid": "b2c786f8-2e39-4648-af93-f6dc44582aba",
+                              "commandName": "runTask",
+                              "packageName": "TaskBot",
+                              "disabled": false,
+                              "attributes": [
+                                {
+                                  "name": "taskbot",
+                                  "value": {
+                                    "type": "TASKBOT",
+                                    "taskbotInput": {
+                                      "type": "DICTIONARY",
+                                      "dictionary": [
+                                        {
+                                          "key": "strStatus",
+                                          "value": {
+                                            "type": "STRING",
+                                            "expression": "$strStatus$"
+                                          }
+                                        },
+                                        {
+                                          "key": "dicConfig",
+                                          "value": {
+                                            "type": "DICTIONARY",
+                                            "expression": "$dicConfig$"
+                                          }
+                                        },
+                                        {
+                                          "key": "strMessage",
+                                          "value": {
+                                            "type": "STRING",
+                                            "string": "No se encontro información para realizar la búsqueda de ningún usuario."
+                                          }
+                                        },
+                                        {
+                                          "key": "strSubtask",
+                                          "value": {
+                                            "type": "STRING",
+                                            "expression": "$System:AATaskName$"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    "taskbotFile": {
+                                      "type": "FILE",
+                                      "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                                    }
+                                  }
+                                },
+                                {
+                                  "name": "repeatOption",
+                                  "value": {
+                                    "type": "STRING",
+                                    "string": "DO_NOT_REPEAT"
+                                  }
+                                },
+                                {
+                                  "name": "delayNextRepetition",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                },
+                                {
+                                  "name": "continueOnError",
+                                  "value": {
+                                    "type": "BOOLEAN",
+                                    "boolean": false
+                                  }
+                                }
+                              ]
+                            }
+                          ],
+                          "disabled": false
+                        }
+                      ],
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "attributes": [
+                            {
+                              "name": "variable",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$strNombreProceso$"
+                              }
+                            },
+                            {
+                              "name": "operator",
+                              "value": {
+                                "type": "STRING",
+                                "string": "NEQ"
+                              }
+                            },
+                            {
+                              "name": "value",
+                              "value": {
+                                "type": "STRING",
+                                "string": ""
+                              }
+                            },
+                            {
+                              "name": "matchCase",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": true
+                              }
+                            },
+                            {
+                              "name": "isIgnoreCarriage",
+                              "value": {
+                                "type": "BOOLEAN",
+                                "boolean": false
+                              }
+                            }
+                          ],
+                          "name": "condition",
+                          "value": {
+                            "type": "CONDITIONAL",
+                            "conditionalName": "stringVariable",
+                            "packageName": "String"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "f63e5bc5-d5d9-4c0e-b37c-a83046027d45",
+                      "commandName": "runTask",
+                      "packageName": "TaskBot",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "taskbot",
+                          "value": {
+                            "type": "TASKBOT",
+                            "taskbotInput": {
+                              "type": "DICTIONARY",
+                              "dictionary": [
+                                {
+                                  "key": "strNombreProceso",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strNombreProceso$"
+                                  }
+                                },
+                                {
+                                  "key": "strRegistro",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strNumeroRadicado$"
+                                  }
+                                },
+                                {
+                                  "key": "strFechaActual",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strFechaActual$"
+                                  }
+                                },
+                                {
+                                  "key": "strDescripcion",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strMensajeError$"
+                                  }
+                                },
+                                {
+                                  "key": "dicConfig",
+                                  "value": {
+                                    "type": "DICTIONARY",
+                                    "expression": "$dicConfig$"
+                                  }
+                                },
+                                {
+                                  "key": "strStatus",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strStatus$"
+                                  }
+                                },
+                                {
+                                  "key": "strCorreoEnviadoPor",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$dicDetalleEmails{emailFrom}$"
+                                  }
+                                },
+                                {
+                                  "key": "strValidacionEstadoArchivo",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strValidacionEstadoArchivo$"
+                                  }
+                                }
+                              ]
+                            },
+                            "taskbotFile": {
+                              "type": "FILE",
+                              "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_06_RegistroControlInterno"
+                            }
+                          }
+                        },
+                        {
+                          "name": "repeatOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "DO_NOT_REPEAT"
+                          }
+                        },
+                        {
+                          "name": "delayNextRepetition",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "loopType",
+                      "value": {
+                        "type": "STRING",
+                        "string": "ITERATOR"
+                      }
+                    },
+                    {
+                      "name": "iterator",
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "dicDetalleEmails"
+                      },
+                      "attributes": [
+                        {
+                          "name": "sessionName",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EmailSession"
+                          }
+                        },
+                        {
+                          "name": "readStatus",
+                          "value": {
+                            "type": "STRING",
+                            "string": "UNREAD"
+                          }
+                        },
+                        {
+                          "name": "enableStatusNoUpdate",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "sortBy",
+                          "value": {
+                            "type": "STRING",
+                            "string": "LATEST_FIRST"
+                          }
+                        },
+                        {
+                          "name": "folder",
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        {
+                          "name": "subject",
+                          "value": {
+                            "type": "STRING",
+                            "expression": "$dicConfig{strAsunto}$"
+                          }
+                        },
+                        {
+                          "name": "from",
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        {
+                          "name": "messageFormat",
+                          "value": {
+                            "type": "STRING",
+                            "string": "PLAINTEXT"
+                          }
+                        },
+                        {
+                          "name": "isToUseLocalTimezone",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        }
+                      ],
+                      "value": {
+                        "type": "ITERATOR",
+                        "iteratorName": "loop.iterators.email",
+                        "packageName": "Email"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "03662849-e416-4c83-8805-3750c00e3d71",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "2"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strStatus"
+                  }
+                },
+                {
+                  "uid": "91f3d1f5-1306-4914-9f68-7f9a89f4d409",
+                  "commandName": "runTask",
+                  "packageName": "TaskBot",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "taskbot",
+                      "value": {
+                        "type": "TASKBOT",
+                        "taskbotInput": {
+                          "type": "DICTIONARY",
+                          "dictionary": [
+                            {
+                              "key": "strStatus",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$strStatus$"
+                              }
+                            },
+                            {
+                              "key": "dicConfig",
+                              "value": {
+                                "type": "DICTIONARY",
+                                "expression": "$dicConfig$"
+                              }
+                            },
+                            {
+                              "key": "strMessage",
+                              "value": {
+                                "type": "STRING",
+                                "string": "No se encontraron más mensajes en la bandeja de entrada."
+                              }
+                            },
+                            {
+                              "key": "strSubtask",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$System:AATaskName$"
+                              }
+                            }
+                          ]
+                        },
+                        "taskbotFile": {
+                          "type": "FILE",
+                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                        }
+                      }
+                    },
+                    {
+                      "name": "repeatOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "DO_NOT_REPEAT"
+                      }
+                    },
+                    {
+                      "name": "delayNextRepetition",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "44d0dee3-3336-4ded-818a-37f63986f36f",
+                  "commandName": "loop.commands.break",
+                  "packageName": "Loop",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "anchor",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Reintentos"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "branches": [
+                {
+                  "uid": "1a640f72-8d27-4679-bbcb-35fb05b6f60c",
+                  "commandName": "catch",
+                  "packageName": "ErrorHandler",
+                  "children": [
+                    {
+                      "uid": "71e12c46-08a2-4cb8-9cfc-c36103047437",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "1"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strStatus"
+                      }
+                    },
+                    {
+                      "uid": "c7565301-f81e-418a-8cb8-967b79226d5e",
+                      "commandName": "runTask",
+                      "packageName": "TaskBot",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "taskbot",
+                          "value": {
+                            "type": "TASKBOT",
+                            "taskbotInput": {
+                              "type": "DICTIONARY",
+                              "dictionary": [
+                                {
+                                  "key": "strStatus",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$strStatus$"
+                                  }
+                                },
+                                {
+                                  "key": "dicConfig",
+                                  "value": {
+                                    "type": "DICTIONARY",
+                                    "expression": "$dicConfig$"
+                                  }
+                                },
+                                {
+                                  "key": "strMessage",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. $strMensajeError$"
+                                  }
+                                },
+                                {
+                                  "key": "strLineaError",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$nmbLineaError.Number:toString$"
+                                  }
+                                },
+                                {
+                                  "key": "strSubtask",
+                                  "value": {
+                                    "type": "STRING",
+                                    "expression": "$System:AATaskName$"
+                                  }
+                                }
+                              ]
+                            },
+                            "taskbotFile": {
+                              "type": "FILE",
+                              "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                            }
+                          }
+                        },
+                        {
+                          "name": "repeatOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "DO_NOT_REPEAT"
+                          }
+                        },
+                        {
+                          "name": "delayNextRepetition",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        },
+                        {
+                          "name": "continueOnError",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "3cb6fc87-dd37-4c30-b35a-1436237584d2",
+                      "commandName": "closeEmail",
+                      "packageName": "Email",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "session",
+                          "value": {
+                            "string": "EmailSession",
+                            "type": "STRING"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "f5a5b2dd-7e0b-48f9-a553-e7895ece0437",
+                      "commandName": "emailConnect",
+                      "packageName": "Email",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "session",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EmailSession"
+                          }
+                        },
+                        {
+                          "name": "serverType",
+                          "value": {
+                            "type": "STRING",
+                            "string": "OUTLOOK"
+                          }
+                        },
+                        {
+                          "name": "select",
+                          "value": {
+                            "type": "STRING",
+                            "string": "LIST"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "uid": "825a9ce7-18ab-4b8d-a0ec-d3bbe6a77f2e",
+                      "commandName": "loop.commands.continue",
+                      "packageName": "Loop",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "anchor",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Reintentos"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "exceptionType",
+                      "value": {
+                        "type": "EXCEPTION",
+                        "exceptionName": "BotException",
+                        "packageName": "ErrorHandler"
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "returns": {
+                    "errorMessage": {
+                      "type": "VARIABLE",
+                      "variableName": "strMensajeError"
+                    },
+                    "errorLineNumber": {
+                      "type": "VARIABLE",
+                      "variableName": "nmbLineaError"
+                    }
+                  }
+                }
+              ],
+              "disabled": false
+            }
+          ],
+          "anchor": {
+            "type": "STRING",
+            "string": "Reintentos"
+          },
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "loopType",
+              "value": {
+                "type": "STRING",
+                "string": "ITERATOR"
+              }
+            },
+            {
+              "name": "iterator",
+              "attributes": [
+                {
+                  "name": "times",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "3"
+                  }
+                }
+              ],
+              "value": {
+                "type": "ITERATOR",
+                "iteratorName": "loop.iterators.times",
+                "packageName": "Loop"
+              }
+            }
+          ]
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Búsqueda de correo"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "name": "dicDetalleEmails",
+      "description": "",
+      "type": "DICTIONARY",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "subtype": "STRING",
+      "defaultValue": {
+        "type": "DICTIONARY",
+        "dictionary": []
+      }
+    },
+    {
+      "name": "strNombreProceso",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "dicConfig",
+      "description": "",
+      "type": "DICTIONARY",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "subtype": "STRING",
+      "defaultValue": {
+        "type": "DICTIONARY",
+        "dictionary": []
+      }
+    },
+    {
+      "name": "strMensajeError",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "nmbLineaError",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    },
+    {
+      "name": "strStatus",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strFechaActual",
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    },
+    {
+      "name": "strNombreArchivoFinal",
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    },
+    {
+      "name": "strValidacionEstadoArchivo",
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    },
+    {
+      "name": "strNumeroRadicado",
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    }
+  ],
+  "packages": [
+    {
+      "name": "Comment",
+      "version": "2.17.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Datetime",
+      "version": "2.17.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Email",
+      "version": "3.33.5",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "File",
+      "version": "6.14.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Loop",
+      "version": "3.10.0-20251030-061555",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Number",
+      "version": "3.11.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Step",
+      "version": "2.7.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "System",
+      "version": "3.18.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "TaskBot",
+      "version": "2.10.0-20241119-100739",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}

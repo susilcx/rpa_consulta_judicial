@@ -1,0 +1,1405 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "6ecc3ed1-7f1b-4ec2-bf9c-658d4d54aa22",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "0c95a7b3-313d-4560-8517-b478485e202c",
+          "commandName": "Comment",
+          "packageName": "Comment",
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "comment",
+              "value": {
+                "type": "STRING",
+                "string": "Llenado del control interno, se realizan validaciones para el llenado"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "9641a2df-822f-4b89-9c6d-a6d576112890",
+          "commandName": "try",
+          "packageName": "ErrorHandler",
+          "children": [
+            {
+              "uid": "fe824d1f-7929-4f9e-a48c-aeb2a3db524f",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "20f48304-256b-4cd9-906e-f760e9fa7b49",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Finalizado sin descarga"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strEstado"
+                  }
+                }
+              ],
+              "branches": [
+                {
+                  "uid": "3e424b2d-c75a-4de4-bb35-eb847910ace1",
+                  "commandName": "elseIf",
+                  "packageName": "If",
+                  "children": [
+                    {
+                      "uid": "fd56b3b3-2f41-4ee8-a62e-70458878cb04",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Finalizado con descarga"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strEstado"
+                      }
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "variable",
+                          "value": {
+                            "type": "STRING",
+                            "expression": "$strValidacionEstadoArchivo$"
+                          }
+                        },
+                        {
+                          "name": "operator",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EQ"
+                          }
+                        },
+                        {
+                          "name": "value",
+                          "value": {
+                            "type": "STRING",
+                            "string": "1"
+                          }
+                        },
+                        {
+                          "name": "matchCase",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "isIgnoreCarriage",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "name": "condition",
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "stringVariable",
+                        "packageName": "String"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "uid": "cd397c14-98ee-4c04-b406-20f1babf34b3",
+                  "commandName": "elseIf",
+                  "packageName": "If",
+                  "children": [
+                    {
+                      "uid": "63a05b4b-5b3a-4fba-bae2-3826201012f6",
+                      "commandName": "assign",
+                      "packageName": "String",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "sourceString",
+                          "value": {
+                            "type": "STRING",
+                            "string": "Finalizado con errores"
+                          }
+                        }
+                      ],
+                      "returnTo": {
+                        "type": "VARIABLE",
+                        "variableName": "strEstado"
+                      }
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "variable",
+                          "value": {
+                            "type": "STRING",
+                            "expression": "$strValidacionEstadoArchivo$"
+                          }
+                        },
+                        {
+                          "name": "operator",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EQ"
+                          }
+                        },
+                        {
+                          "name": "value",
+                          "value": {
+                            "type": "STRING",
+                            "string": "2"
+                          }
+                        },
+                        {
+                          "name": "matchCase",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "isIgnoreCarriage",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "name": "condition",
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "stringVariable",
+                        "packageName": "String"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strValidacionEstadoArchivo$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": "0"
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "f8addda1-a069-4a68-add6-c5945925a690",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "12d3f1da-de4e-4e83-b21e-6606d5e7fb80",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Sin novedades en la ejecución"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strDescripcion"
+                  }
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strDescripcion$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": ""
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "deae9a4e-b7f6-43cb-902f-2cb975c4fe71",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "210202f9-6127-49df-adb2-4534e0f6ac0b",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Error"
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strEstado"
+                  }
+                },
+                {
+                  "uid": "1fa787df-92fd-430d-834c-c338039ce064",
+                  "commandName": "assign",
+                  "packageName": "String",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "sourceString",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Se presento un error al momento de realizar la ejecución, revisar el log de la ejecución."
+                      }
+                    }
+                  ],
+                  "returnTo": {
+                    "type": "VARIABLE",
+                    "variableName": "strDescripcion"
+                  }
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strNombreProceso$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": ""
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "operatorAttribute": {
+                    "operator": "AND",
+                    "attributes": [
+                      {
+                        "name": "variable",
+                        "value": {
+                          "type": "STRING",
+                          "expression": "$strRegistro$"
+                        }
+                      },
+                      {
+                        "name": "operator",
+                        "value": {
+                          "type": "STRING",
+                          "string": "EQ"
+                        }
+                      },
+                      {
+                        "name": "value",
+                        "value": {
+                          "type": "STRING",
+                          "string": ""
+                        }
+                      },
+                      {
+                        "name": "matchCase",
+                        "value": {
+                          "type": "BOOLEAN",
+                          "boolean": true
+                        }
+                      },
+                      {
+                        "name": "isIgnoreCarriage",
+                        "value": {
+                          "type": "BOOLEAN",
+                          "boolean": false
+                        }
+                      }
+                    ],
+                    "operatorAttribute": {
+                      "operator": "AND",
+                      "attributes": [
+                        {
+                          "name": "variable",
+                          "value": {
+                            "type": "STRING",
+                            "string": "strEstado"
+                          }
+                        },
+                        {
+                          "name": "operator",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EQ"
+                          }
+                        },
+                        {
+                          "name": "value",
+                          "value": {
+                            "type": "STRING",
+                            "string": ""
+                          }
+                        },
+                        {
+                          "name": "matchCase",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "isIgnoreCarriage",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "stringVariable",
+                        "packageName": "String"
+                      }
+                    },
+                    "value": {
+                      "type": "CONDITIONAL",
+                      "conditionalName": "stringVariable",
+                      "packageName": "String"
+                    }
+                  },
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                }
+              ]
+            }
+          ],
+          "branches": [
+            {
+              "uid": "4a173617-d6f4-4edf-b037-222f5a8a2171",
+              "commandName": "catch",
+              "packageName": "ErrorHandler",
+              "children": [
+                {
+                  "uid": "81ad934e-2658-4167-bc2a-970731f38395",
+                  "commandName": "runTask",
+                  "packageName": "TaskBot",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "taskbot",
+                      "value": {
+                        "type": "TASKBOT",
+                        "taskbotInput": {
+                          "type": "DICTIONARY",
+                          "dictionary": [
+                            {
+                              "key": "strStatus",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$strStatus$"
+                              }
+                            },
+                            {
+                              "key": "dicConfig",
+                              "value": {
+                                "type": "DICTIONARY",
+                                "expression": "$dicConfig$"
+                              }
+                            },
+                            {
+                              "key": "strMessage",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. $strMensajeError$"
+                              }
+                            },
+                            {
+                              "key": "strLineaError",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$nmbLineaError.Number:toString$"
+                              }
+                            },
+                            {
+                              "key": "strSubtask",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$System:AATaskName$"
+                              }
+                            }
+                          ]
+                        },
+                        "taskbotFile": {
+                          "type": "FILE",
+                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                        }
+                      }
+                    },
+                    {
+                      "name": "repeatOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "DO_NOT_REPEAT"
+                      }
+                    },
+                    {
+                      "name": "delayNextRepetition",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "exceptionType",
+                  "value": {
+                    "type": "EXCEPTION",
+                    "exceptionName": "BotException",
+                    "packageName": "ErrorHandler"
+                  }
+                },
+                {
+                  "name": "continueOnError",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returns": {
+                "errorMessage": {
+                  "type": "VARIABLE",
+                  "variableName": "strMensajeError"
+                },
+                "errorLineNumber": {
+                  "type": "VARIABLE",
+                  "variableName": "nmbLineaError"
+                }
+              }
+            }
+          ],
+          "disabled": false
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Validaciones iniciales"
+          }
+        }
+      ]
+    },
+    {
+      "uid": "fca825cf-cb9a-4920-bcd6-cd9c333d4d7b",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "078c241d-a30e-4abf-b766-e06b04e2300b",
+          "commandName": "Comment",
+          "packageName": "Comment",
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "comment",
+              "value": {
+                "type": "STRING",
+                "string": "Se realiza el llenado según la información obtenida en las ejecuciones anteriores"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "7692a716-0865-4a9f-99a9-7d99901009b0",
+          "commandName": "try",
+          "packageName": "ErrorHandler",
+          "children": [
+            {
+              "uid": "c64e40de-ddf8-41bf-b1b0-48f67b2b435f",
+              "commandName": "OpenSpreadsheet",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "excelSourceOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "desktopfilepath"
+                  }
+                },
+                {
+                  "name": "filePath",
+                  "value": {
+                    "type": "FILE",
+                    "expression": "file://$dicConfig{strArchivoACI}$"
+                  }
+                },
+                {
+                  "name": "containsHeader",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": true
+                  }
+                },
+                {
+                  "name": "isSpecificSheet",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "fileAccessMode",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EDIT"
+                  }
+                },
+                {
+                  "name": "isSecure",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "loadAddIns",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "excludeHiddenSheets",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "containsChart",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "setSensitivity",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "disableUpdateLinks",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "SESSION",
+                "sessionName": {
+                  "type": "STRING",
+                  "string": "Default"
+                },
+                "sessionTarget": "LOCAL"
+              }
+            },
+            {
+              "uid": "c1598c85-6354-40d9-95db-0adb11702d04",
+              "commandName": "InsertDeleteRowColumn",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "rowOperationsRequested",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "insertRowSelected",
+                  "value": {
+                    "type": "STRING",
+                    "string": "true"
+                  }
+                },
+                {
+                  "name": "insertRowNumber",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "2"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "db07ef41-1d42-4215-af38-8e171d30c474",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "A2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strNombreProceso$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "37eb3965-86b1-480b-95b5-1a1fee4a9c1e",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "B2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strRegistro$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "23f3dfb9-5a7e-447e-9521-91251dbd781c",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "C2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strFechaActual$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "f5a521b3-ad40-48ae-a650-81819df83b95",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "D2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strEstado$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "5a41a006-9800-4a40-8f8d-69774b1a0096",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "E2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strDescripcion$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "8f8ac142-57a3-412e-88de-648211007dbb",
+              "commandName": "SetCell",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "cellOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "SPECIFIC_CELL"
+                  }
+                },
+                {
+                  "name": "cell",
+                  "value": {
+                    "type": "STRING",
+                    "string": "F2"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strCorreoEnviadoPor$"
+                  }
+                },
+                {
+                  "name": "session",
+                  "value": {
+                    "type": "SESSION",
+                    "sessionName": {
+                      "type": "STRING",
+                      "string": "Default"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "ca7423ec-d44f-4ed4-b9f7-4195502a42a4",
+              "commandName": "CloseSpreadsheet",
+              "packageName": "Excel_MS",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "session",
+                  "value": {
+                    "sessionName": {
+                      "string": "Default",
+                      "type": "STRING"
+                    },
+                    "type": "SESSION"
+                  }
+                },
+                {
+                  "name": "isSave",
+                  "value": {
+                    "boolean": true,
+                    "type": "BOOLEAN"
+                  }
+                },
+                {
+                  "name": "isDisplayErrorEnabled",
+                  "value": {
+                    "boolean": false,
+                    "type": "BOOLEAN"
+                  }
+                }
+              ]
+            }
+          ],
+          "branches": [
+            {
+              "uid": "7d3a622e-e42c-44a7-8387-28f8c16bf616",
+              "commandName": "catch",
+              "packageName": "ErrorHandler",
+              "children": [
+                {
+                  "uid": "67bb94ba-8199-498f-aff3-58c0d862f3f4",
+                  "commandName": "runTask",
+                  "packageName": "TaskBot",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "taskbot",
+                      "value": {
+                        "type": "TASKBOT",
+                        "taskbotInput": {
+                          "type": "DICTIONARY",
+                          "dictionary": [
+                            {
+                              "key": "strStatus",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$strStatus$"
+                              }
+                            },
+                            {
+                              "key": "dicConfig",
+                              "value": {
+                                "type": "DICTIONARY",
+                                "expression": "$dicConfig$"
+                              }
+                            },
+                            {
+                              "key": "strMessage",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. $strMensajeError$"
+                              }
+                            },
+                            {
+                              "key": "strLineaError",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$nmbLineaError.Number:toString$"
+                              }
+                            },
+                            {
+                              "key": "strSubtask",
+                              "value": {
+                                "type": "STRING",
+                                "expression": "$System:AATaskName$"
+                              }
+                            }
+                          ]
+                        },
+                        "taskbotFile": {
+                          "type": "FILE",
+                          "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_03_Logs"
+                        }
+                      }
+                    },
+                    {
+                      "name": "repeatOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "DO_NOT_REPEAT"
+                      }
+                    },
+                    {
+                      "name": "delayNextRepetition",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    },
+                    {
+                      "name": "continueOnError",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "exceptionType",
+                  "value": {
+                    "type": "EXCEPTION",
+                    "exceptionName": "BotException",
+                    "packageName": "ErrorHandler"
+                  }
+                },
+                {
+                  "name": "continueOnError",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returns": {
+                "errorMessage": {
+                  "type": "VARIABLE",
+                  "variableName": "strMensajeError"
+                },
+                "errorLineNumber": {
+                  "type": "VARIABLE",
+                  "variableName": "nmbLineaError"
+                }
+              }
+            }
+          ],
+          "disabled": false
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Llenado del ACI"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "type": "NUMBER",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleNumber"
+    },
+    {
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleString"
+    },
+    {
+      "name": "strNombreProceso",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strRegistro",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strEstado",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strFechaActual",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strDescripcion",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "dicConfig",
+      "description": "",
+      "type": "DICTIONARY",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "subtype": "STRING",
+      "defaultValue": {
+        "type": "DICTIONARY",
+        "dictionary": []
+      }
+    },
+    {
+      "name": "strStatus",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": true,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strCorreoEnviadoPor",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strValidacionEstadoArchivo",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strMensajeError",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "nmbLineaError",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "Comment",
+      "version": "2.17.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Excel_MS",
+      "version": "6.23.16",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Number",
+      "version": "3.11.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Step",
+      "version": "2.7.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "System",
+      "version": "3.18.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "TaskBot",
+      "version": "2.10.0-20241119-100739",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}

@@ -1,0 +1,139 @@
+(15/05/2026 12:04:50 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:04:50 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:04:53 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:14:16 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:14:16 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:14:18 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:15:34 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:15:38 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:15:48 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 12:16:11 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:16:25 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 12:16:48 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 12:17:06 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:25:37 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:46:48 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:46:51 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:46:58 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 12:47:15 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:47:25 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 12:47:49 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 12:48:08 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:49:30 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:49:30 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:49:31 a. m.)  INFO - No se encontro información para realizar la búsqueda de ningún usuario.
+(15/05/2026 12:49:31 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:53:41 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:53:41 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:53:42 a. m.)  INFO - No se encontro información para realizar la búsqueda de ningún usuario.
+(15/05/2026 12:53:42 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 12:53:54 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:54:01 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 12:54:18 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 12:54:18 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 11:24:44 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 11:24:45 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 11:25:30 a. m.)  INFO - Se extrajo la información para consultar al usuario: NOMBRE A CONSULTAR: Nombres y Apellidos
+(15/05/2026 11:25:41 a. m.) Error - Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. An unexpected error occurred. 
+NTFS ADS separator (':') in file name is forbidden. 
+Please contact system administrator.  - 32 -\Bots\PruebaTCC\TCC_04_ExtraccionCorreos
+(15/05/2026 11:25:46 a. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 11:25:55 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:26:02 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 11:26:34 a. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 11:26:36 a. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 11:26:54 a. m.) Error - Se produjo el siguiente error: Los archivos descargados no corresponden a 1, por ende existe un error en la descarga.  - 76 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(15/05/2026 11:27:03 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:27:10 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 11:29:17 a. m.) Error - Se produjo el siguiente error: Cannot find window or application titled 'Consulta de Procesos por Nombre o Razón Social- Consejo Superior de la Judicatura - Google Chrome' that was open during recording.  - 28 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(15/05/2026 11:29:25 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:29:32 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 11:30:04 a. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 11:30:06 a. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 11:30:24 a. m.) Error - Se produjo el siguiente error: Los archivos descargados no corresponden a 1, por ende existe un error en la descarga.  - 76 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(15/05/2026 11:30:28 a. m.) Error - Se encontró un error al momento de conectarse al servicio de correos. Se realizan 3 reintentos. Los archivos descargados no corresponden a 1, por ende existe un error en la descarga. - 32 -\Bots\PruebaTCC\TCC_04_ExtraccionCorreos
+(15/05/2026 11:30:28 a. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 11:40:23 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 11:40:24 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 11:40:26 a. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila ha ocurrido un error en la descarga
+(15/05/2026 11:40:38 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:40:48 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila ha ocurrido un error en la descarga
+(15/05/2026 11:41:05 a. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila ha ocurrido un error en la descarga
+(15/05/2026 11:41:07 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 11:41:14 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:41:21 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 11:41:38 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 11:41:41 a. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 11:41:49 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:41:55 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 11:42:27 a. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 11:42:28 a. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 11:42:46 a. m.) Error - Se produjo el siguiente error: Los archivos descargados no corresponden a 1, por ende existe un error en la descarga.  - 76 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(15/05/2026 11:46:25 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 11:46:26 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 11:47:47 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:48:00 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:48:10 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:48:27 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:48:52 a. m.)  INFO - No se encontro información para realizar la búsqueda de ningún usuario.
+(15/05/2026 11:49:01 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 11:49:09 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:49:16 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 11:49:34 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 11:50:27 a. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 11:50:35 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:50:42 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 11:51:14 a. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 11:51:16 a. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 11:58:15 a. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 11:58:15 a. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 11:58:17 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:58:28 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:58:38 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:58:55 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 11:58:59 a. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 11:59:07 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:59:14 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 11:59:30 a. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 11:59:33 a. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 11:59:41 a. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 11:59:48 a. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 12:00:19 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 12:00:21 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 12:00:38 p. m.)  INFO - Se guardo el archivo bajo el nombre: C:\PruebaTecnicaTCC\Output\detalle_proceso_Oscar Martinez Davila_15052026.docx
+(15/05/2026 12:00:41 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:11:32 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:11:32 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:11:34 p. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 12:11:45 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:11:55 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 12:12:12 p. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona no se encontro ningún registro
+(15/05/2026 12:12:16 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 12:12:24 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:12:31 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 12:13:02 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 12:13:04 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 12:13:21 p. m.)  INFO - Se guardo el archivo bajo el nombre: C:\PruebaTecnicaTCC\Output\detalle_proceso_Oscar Martinez Davila_15052026.docx
+(15/05/2026 12:13:24 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:17:16 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:17:16 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:17:19 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:18:29 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:18:29 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:18:30 p. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(15/05/2026 12:18:40 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:18:47 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(15/05/2026 12:19:04 p. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(15/05/2026 12:19:08 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:33:52 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:33:53 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:33:55 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.
+(15/05/2026 12:34:26 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(15/05/2026 12:34:26 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(15/05/2026 12:34:27 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(15/05/2026 12:34:37 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(15/05/2026 12:34:44 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(15/05/2026 12:35:16 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(15/05/2026 12:35:17 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(15/05/2026 12:35:35 p. m.)  INFO - Se guardo el archivo bajo el nombre: C:\PruebaTecnicaTCC\Output\detalle_proceso_Oscar Martinez Davila_15052026.docx
+(15/05/2026 12:35:39 p. m.)  INFO - No se encontraron más mensajes en la bandeja de entrada.

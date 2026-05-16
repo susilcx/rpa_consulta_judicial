@@ -1,0 +1,156 @@
+(14/05/2026 9:23:07(14/05/2026 9:58:02(14/05/2026 9:58:07(14/05/2026 10:06:31(14/05/2026 10:09:36 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:09:49 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:12:34 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:12:35 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:13:18 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:13:46 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:13:53 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:13:56 p. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila
+(14/05/2026 10:15:59 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:15:59 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:16:00 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:16:11 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:16:18 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:16:23 p. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila
+(14/05/2026 10:19:57 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:19:57 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:19:58 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:20:10 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:20:17 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:20:45 p. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila
+(14/05/2026 10:21:22 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:21:22 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:22:03 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:22:04 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:22:07 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:22:19 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:22:26 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:22:31 p. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila
+(14/05/2026 10:27:15 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:27:15 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:27:55 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:27:55 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:27:57 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:28:09 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:28:16 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:28:22 p. m.)  INFO - No se encontraron procesos para el usuario: Oscar Martinez Davila
+(14/05/2026 10:33:02 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:33:04 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:35:36 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:35:42 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:36:00 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:36:34 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:36:48 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:42:41 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:42:41 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:43:31 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:43:33 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:43:42 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:44:14 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:44:25 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:45:04 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 10:46:23 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 10:46:23 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 10:46:24 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 10:46:35 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 10:46:42 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 10:47:13 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 10:47:14 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 10:47:18 p. m.)  INFO - No se encontraron registros para descargar.
+(14/05/2026 11:07:41 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:07:41 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:09:08 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:09:09 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:09:11 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:09:23 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:09:30 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:10:02 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:10:03 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:10:21 p. m.) Error - Se produjo el siguiente error: Unable to delete the file(s) because the given source folder path 'C:\Users\slc05\Downloads\C:\Users\slc05\Downloads' does not exist.  - 45 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:10:29 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:10:36 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:11:10 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:11:11 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:11:28 p. m.) Error - Se produjo el siguiente error: Unable to delete the file(s) because the given source folder path 'C:\Users\slc05\Downloads\C:\Users\slc05\Downloads' does not exist.  - 45 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:12:59 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:12:59 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:13:00 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:13:11 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:13:18 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:13:50 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:13:51 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:14:09 p. m.) Error - Se produjo el siguiente error: Unable to copy the file because the file 'C:\PruebaTecnicaTCC\Output\Proceso_20001333100320110036800_2026515_231113.docx' already exists in the destination.  - 44 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:17:49 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:17:49 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:17:50 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:18:01 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:18:08 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:18:40 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:18:42 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:18:59 p. m.) Error - Se produjo el siguiente error: Unable to delete the file(s) because the given source folder path 'C:\Users\slc05\Downloads\C:\Users\slc05\Downloads' does not exist.  - 45 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:21:37 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:21:37 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:22:19 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:22:19 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:22:25 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:22:40 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:22:47 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:23:19 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:23:21 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:23:38 p. m.) Error - Se produjo el siguiente error: Unable to copy the file because the file 'C:\PruebaTecnicaTCC\Output\Proceso_20001333100320110036800_2026515_231843.docx' already exists in the destination.  - 44 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:25:09 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:25:12 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:27:07 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:27:11 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:27:28 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:28:19 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:28:53 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:29:31 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:29:37 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:32:09 p. m.) Error - Se produjo el siguiente error: Unable to copy the file(s) because the source file path 'C:\Users\slc05\Downloads\Proceso_20001333100320110036800_2026515_231843.docx' does not exist. Verify the file path and try again.  - 44 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:34:35 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:34:35 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:35:09 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:35:09 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:35:12 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:35:24 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:35:31 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:36:03 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:36:04 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:36:22 p. m.) Error - Se produjo el siguiente error: Unable to delete the file(s) because the given source folder path 'C:\Users\slc05\Downloads\C:\Users\slc05\Downloads' does not exist.  - 45 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:36:31 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:36:38 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:37:09 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:37:10 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:37:28 p. m.) Error - Se produjo el siguiente error: Unable to copy the file because the file 'C:\PruebaTecnicaTCC\Output\Proceso_20001333100320110036800_2026515_23366.docx' already exists in the destination.  - 44 -\Bots\PruebaTCC\TCC_05_NavegacionWeb
+(14/05/2026 11:37:37 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:41:42 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:41:42 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:42:16 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:42:16 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:42:19 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:42:31 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:42:38 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:43:10 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:43:11 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:43:29 p. m.)  INFO - Se guardo el archivo bajo el nombre: C:\PruebaTecnicaTCC\Output\detalle_proceso_Oscar Martinez Davila_14052026.docx
+(14/05/2026 11:46:26 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:46:26 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:46:58 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:46:58 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:47:01 p. m.)  INFO - Se extrajo la información para consultar al usuario: Susana Londoño Carmona
+(14/05/2026 11:47:13 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:47:20 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Susana Londoño Carmona
+(14/05/2026 11:47:36 p. m.)  INFO - No se encontraron procesos para el usuario: Susana Londoño Carmona
+(14/05/2026 11:50:02 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:50:02 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:50:41 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:50:42 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.
+(14/05/2026 11:50:45 p. m.)  INFO - Se extrajo la información para consultar al usuario: Oscar Martinez Davila
+(14/05/2026 11:50:59 p. m.)  INFO - Se cargo correctamente la página de consulta de procesos.
+(14/05/2026 11:51:06 p. m.)  INFO - Se realizo la navegación inicial Tipo de persona: Natural Nombre de la persona: Oscar Martinez Davila
+(14/05/2026 11:51:37 p. m.)  INFO - Se encontraron resultados para el usuario: Oscar Martinez Davila
+(14/05/2026 11:51:39 p. m.)  INFO - Se encontro el registro número 6 con el número:  13001408801120110001900
+(14/05/2026 11:51:56 p. m.)  INFO - Se guardo el archivo bajo el nombre: C:\PruebaTecnicaTCC\Output\detalle_proceso_Oscar Martinez Davila_14052026.docx
+(14/05/2026 11:57:55 p. m.)  INFO - Lectura del diccionario de configuracion exitosa
+(14/05/2026 11:57:58 p. m.)  INFO - Se realizó la conexión de manera exitosa al servicio de correos.

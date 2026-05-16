@@ -1,0 +1,594 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "a9445219-beb0-4f79-9e74-32d269e5a700",
+      "commandName": "step",
+      "packageName": "Step",
+      "children": [
+        {
+          "uid": "5b34e06a-3e1a-4ad1-9ea5-6a130f587675",
+          "commandName": "Comment",
+          "packageName": "Comment",
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "comment",
+              "value": {
+                "type": "STRING",
+                "string": "Se utiliza el 1 para loggear error y 2 para loggear información general"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "8594fd75-2821-482e-a872-c919c989e9b6",
+          "commandName": "try",
+          "packageName": "ErrorHandler",
+          "children": [
+            {
+              "uid": "95d1d6b3-26bc-44a8-8684-9eebcde7b046",
+              "commandName": "toString",
+              "packageName": "Datetime",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "source",
+                  "value": {
+                    "type": "DATETIME",
+                    "expression": "$System:Date$"
+                  }
+                },
+                {
+                  "name": "selectPattern",
+                  "value": {
+                    "type": "STRING",
+                    "string": "CUSTOM"
+                  }
+                },
+                {
+                  "name": "patternInput",
+                  "value": {
+                    "type": "STRING",
+                    "string": "ddMMyyyy"
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "VARIABLE",
+                "variableName": "strFechaLog"
+              }
+            },
+            {
+              "uid": "0f90ea54-4535-47c1-a00b-ab65ad4efe78",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "c36f7cbd-b8b3-4971-b9e0-ba69b25f6665",
+                  "commandName": "createFile",
+                  "packageName": "File",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "filePath",
+                      "value": {
+                        "type": "FILE",
+                        "expression": "file://$dicConfig{strLogs}$Logs_$strFechaLog$.txt"
+                      }
+                    },
+                    {
+                      "name": "isOverwrite",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ]
+                }
+              ],
+              "branches": [],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "sourceFilePath",
+                      "value": {
+                        "type": "FILE",
+                        "expression": "file://$dicConfig{strLogs}$Logs_$strFechaLog$.txt"
+                      }
+                    },
+                    {
+                      "name": "waitTimeout",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "0"
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "fileNotExists",
+                    "packageName": "File"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "5a17c0d5-1a4e-4734-a065-96b00773d099",
+              "commandName": "if",
+              "packageName": "If",
+              "children": [
+                {
+                  "uid": "26b50a31-ae78-4e6e-a651-3e116e28e16a",
+                  "commandName": "logToFile",
+                  "packageName": "LogToFile",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "filePath",
+                      "value": {
+                        "type": "FILE",
+                        "expression": "file://$dicConfig{strLogs}$Logs_$strFechaLog$.txt"
+                      }
+                    },
+                    {
+                      "name": "logContent",
+                      "value": {
+                        "type": "STRING",
+                        "expression": " INFO - $strMessage$"
+                      }
+                    },
+                    {
+                      "name": "appendTimestamp",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "logOption",
+                      "value": {
+                        "type": "STRING",
+                        "string": "APPEND_FILE"
+                      }
+                    },
+                    {
+                      "name": "encodingValue",
+                      "value": {
+                        "type": "STRING",
+                        "string": "UTF8"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "branches": [
+                {
+                  "uid": "1240c22c-625e-4af6-a563-cc66e12b6bc9",
+                  "commandName": "elseIf",
+                  "packageName": "If",
+                  "children": [
+                    {
+                      "uid": "d9b0d1b1-e333-401d-9794-a60c1009a79e",
+                      "commandName": "logToFile",
+                      "packageName": "LogToFile",
+                      "disabled": false,
+                      "attributes": [
+                        {
+                          "name": "filePath",
+                          "value": {
+                            "type": "FILE",
+                            "expression": "file://$dicConfig{strLogs}$Logs_$strFechaLog$.txt"
+                          }
+                        },
+                        {
+                          "name": "logContent",
+                          "value": {
+                            "type": "STRING",
+                            "expression": "Error - $strMessage$ - $strLineaError$ -$strSubtask$"
+                          }
+                        },
+                        {
+                          "name": "appendTimestamp",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "logOption",
+                          "value": {
+                            "type": "STRING",
+                            "string": "APPEND_FILE"
+                          }
+                        },
+                        {
+                          "name": "encodingValue",
+                          "value": {
+                            "type": "STRING",
+                            "string": "UTF8"
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "attributes": [
+                        {
+                          "name": "variable",
+                          "value": {
+                            "type": "STRING",
+                            "expression": "$strStatus$"
+                          }
+                        },
+                        {
+                          "name": "operator",
+                          "value": {
+                            "type": "STRING",
+                            "string": "EQ"
+                          }
+                        },
+                        {
+                          "name": "value",
+                          "value": {
+                            "type": "STRING",
+                            "string": "1"
+                          }
+                        },
+                        {
+                          "name": "matchCase",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": true
+                          }
+                        },
+                        {
+                          "name": "isIgnoreCarriage",
+                          "value": {
+                            "type": "BOOLEAN",
+                            "boolean": false
+                          }
+                        }
+                      ],
+                      "name": "condition",
+                      "value": {
+                        "type": "CONDITIONAL",
+                        "conditionalName": "stringVariable",
+                        "packageName": "String"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "attributes": [
+                    {
+                      "name": "variable",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strStatus$"
+                      }
+                    },
+                    {
+                      "name": "operator",
+                      "value": {
+                        "type": "STRING",
+                        "string": "EQ"
+                      }
+                    },
+                    {
+                      "name": "value",
+                      "value": {
+                        "type": "STRING",
+                        "string": "2"
+                      }
+                    },
+                    {
+                      "name": "matchCase",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "isIgnoreCarriage",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": false
+                      }
+                    }
+                  ],
+                  "name": "condition",
+                  "value": {
+                    "type": "CONDITIONAL",
+                    "conditionalName": "stringVariable",
+                    "packageName": "String"
+                  }
+                }
+              ]
+            }
+          ],
+          "branches": [
+            {
+              "uid": "f6e9921d-fd21-42c8-b9c8-d0538786428e",
+              "commandName": "catch",
+              "packageName": "ErrorHandler",
+              "children": [
+                {
+                  "uid": "0307aca7-fbc1-475e-8c10-f44bd6c00265",
+                  "commandName": "messageBox",
+                  "packageName": "MessageBox",
+                  "disabled": false,
+                  "attributes": [
+                    {
+                      "name": "title",
+                      "value": {
+                        "type": "STRING",
+                        "string": "Automation Anywhere Enterprise Client"
+                      }
+                    },
+                    {
+                      "name": "content",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$ErrorMessage$ - $ErrorLineNumber.Number:toString$"
+                      }
+                    },
+                    {
+                      "name": "scrollLines",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "30"
+                      }
+                    },
+                    {
+                      "name": "closeMsgBox",
+                      "value": {
+                        "type": "BOOLEAN",
+                        "boolean": true
+                      }
+                    },
+                    {
+                      "name": "timeOut",
+                      "value": {
+                        "type": "NUMBER",
+                        "number": "5"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "exceptionType",
+                  "value": {
+                    "type": "EXCEPTION",
+                    "exceptionName": "BotException",
+                    "packageName": "ErrorHandler"
+                  }
+                },
+                {
+                  "name": "continueOnError",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returns": {
+                "errorMessage": {
+                  "type": "VARIABLE",
+                  "variableName": "ErrorMessage"
+                },
+                "errorLineNumber": {
+                  "type": "VARIABLE",
+                  "variableName": "ErrorLineNumber"
+                }
+              }
+            }
+          ],
+          "disabled": false
+        }
+      ],
+      "disabled": false,
+      "attributes": [
+        {
+          "name": "title",
+          "value": {
+            "type": "STRING",
+            "string": "Logs del proceso"
+          }
+        }
+      ]
+    }
+  ],
+  "variables": [
+    {
+      "type": "NUMBER",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleNumber"
+    },
+    {
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleString"
+    },
+    {
+      "name": "strStatus",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "dicConfig",
+      "description": "",
+      "type": "DICTIONARY",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "subtype": "STRING",
+      "defaultValue": {
+        "type": "DICTIONARY",
+        "dictionary": []
+      }
+    },
+    {
+      "name": "strMessage",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strFechaLog",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strLineaError",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strSubtask",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": true,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "ErrorMessage",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "ErrorLineNumber",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "Comment",
+      "version": "2.17.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Datetime",
+      "version": "2.17.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "File",
+      "version": "6.14.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "LogToFile",
+      "version": "3.11.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "MessageBox",
+      "version": "3.8.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Number",
+      "version": "3.11.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Step",
+      "version": "2.7.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "System",
+      "version": "3.18.0",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}

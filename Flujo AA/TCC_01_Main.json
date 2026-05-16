@@ -1,0 +1,435 @@
+{
+  "triggers": [],
+  "nodes": [
+    {
+      "uid": "3571ef2f-4ab9-421e-bf03-f5ecb6b8fb45",
+      "commandName": "try",
+      "packageName": "ErrorHandler",
+      "children": [
+        {
+          "uid": "119dee77-7be1-4f4b-b20f-5f4301aaa328",
+          "commandName": "Comment",
+          "packageName": "Comment",
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "comment",
+              "value": {
+                "type": "STRING",
+                "string": "Se hace el llamado de configuración para obtener el diccionario"
+              }
+            }
+          ]
+        },
+        {
+          "uid": "95bf04a1-b5ef-4613-96ae-d0c4e99c3f6c",
+          "commandName": "runTask",
+          "packageName": "TaskBot",
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "taskbot",
+              "value": {
+                "type": "TASKBOT",
+                "taskbotInput": {
+                  "type": "DICTIONARY",
+                  "dictionary": [
+                    {
+                      "key": "strRutaConfig",
+                      "value": {
+                        "type": "STRING",
+                        "expression": "$strRutaConfig$"
+                      }
+                    }
+                  ]
+                },
+                "taskbotFile": {
+                  "type": "FILE",
+                  "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_02_Config"
+                }
+              }
+            },
+            {
+              "name": "repeatOption",
+              "value": {
+                "type": "STRING",
+                "string": "DO_NOT_REPEAT"
+              }
+            },
+            {
+              "name": "delayNextRepetition",
+              "value": {
+                "type": "BOOLEAN",
+                "boolean": false
+              }
+            },
+            {
+              "name": "continueOnError",
+              "value": {
+                "type": "BOOLEAN",
+                "boolean": false
+              }
+            }
+          ],
+          "returnTo": {
+            "type": "DICTIONARY",
+            "dictionary": [
+              {
+                "key": "strStatus",
+                "value": {
+                  "type": "VARIABLE",
+                  "variableName": "strStatus"
+                }
+              },
+              {
+                "key": "dicConfig",
+                "value": {
+                  "type": "VARIABLE",
+                  "variableName": "dicConfig"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "uid": "4196bf47-ea6f-451f-9782-2d9f8321bffe",
+          "commandName": "if",
+          "packageName": "If",
+          "children": [
+            {
+              "uid": "d341dbb2-d2ae-4419-b453-7644df086c6f",
+              "commandName": "Comment",
+              "packageName": "Comment",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "comment",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Se hace el llamado de la extracción de correos"
+                  }
+                }
+              ]
+            },
+            {
+              "uid": "98aa6ae6-97a5-428c-b544-9e25476ce147",
+              "commandName": "runTask",
+              "packageName": "TaskBot",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "taskbot",
+                  "value": {
+                    "type": "TASKBOT",
+                    "taskbotInput": {
+                      "type": "DICTIONARY",
+                      "dictionary": [
+                        {
+                          "key": "dicConfig",
+                          "value": {
+                            "type": "DICTIONARY",
+                            "expression": "$dicConfig$"
+                          }
+                        }
+                      ]
+                    },
+                    "taskbotFile": {
+                      "type": "FILE",
+                      "string": "repository:///Automation%20Anywhere/Bots/PruebaTCC/TCC_04_ExtraccionCorreos"
+                    }
+                  }
+                },
+                {
+                  "name": "repeatOption",
+                  "value": {
+                    "type": "STRING",
+                    "string": "DO_NOT_REPEAT"
+                  }
+                },
+                {
+                  "name": "delayNextRepetition",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                },
+                {
+                  "name": "continueOnError",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "returnTo": {
+                "type": "DICTIONARY",
+                "dictionary": [
+                  {
+                    "key": "strStatus",
+                    "value": {
+                      "type": "VARIABLE",
+                      "variableName": "strStatus"
+                    }
+                  }
+                ]
+              }
+            }
+          ],
+          "branches": [],
+          "disabled": false,
+          "attributes": [
+            {
+              "attributes": [
+                {
+                  "name": "variable",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "$strStatus$"
+                  }
+                },
+                {
+                  "name": "operator",
+                  "value": {
+                    "type": "STRING",
+                    "string": "EQ"
+                  }
+                },
+                {
+                  "name": "value",
+                  "value": {
+                    "type": "STRING",
+                    "string": "2"
+                  }
+                },
+                {
+                  "name": "matchCase",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": true
+                  }
+                },
+                {
+                  "name": "isIgnoreCarriage",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ],
+              "name": "condition",
+              "value": {
+                "type": "CONDITIONAL",
+                "conditionalName": "stringVariable",
+                "packageName": "String"
+              }
+            }
+          ]
+        }
+      ],
+      "branches": [
+        {
+          "uid": "51dd5fd8-5b12-4956-8c78-680140eae7ed",
+          "commandName": "catch",
+          "packageName": "ErrorHandler",
+          "children": [
+            {
+              "uid": "ae4eb943-01ba-411c-af18-568f5a4b9e2a",
+              "commandName": "messageBox",
+              "packageName": "MessageBox",
+              "disabled": false,
+              "attributes": [
+                {
+                  "name": "title",
+                  "value": {
+                    "type": "STRING",
+                    "string": "Automation Anywhere Enterprise Client"
+                  }
+                },
+                {
+                  "name": "content",
+                  "value": {
+                    "type": "STRING",
+                    "expression": "Error en la ejecución.\n\n$strMensajeError$ en la línea $nmbLineError.Number:toString$\n"
+                  }
+                },
+                {
+                  "name": "scrollLines",
+                  "value": {
+                    "type": "NUMBER",
+                    "number": "30"
+                  }
+                },
+                {
+                  "name": "closeMsgBox",
+                  "value": {
+                    "type": "BOOLEAN",
+                    "boolean": false
+                  }
+                }
+              ]
+            }
+          ],
+          "disabled": false,
+          "attributes": [
+            {
+              "name": "exceptionType",
+              "value": {
+                "type": "EXCEPTION",
+                "exceptionName": "BotException",
+                "packageName": "ErrorHandler"
+              }
+            },
+            {
+              "name": "continueOnError",
+              "value": {
+                "type": "BOOLEAN",
+                "boolean": false
+              }
+            }
+          ],
+          "returns": {
+            "errorMessage": {
+              "type": "VARIABLE",
+              "variableName": "strMensajeError"
+            },
+            "errorLineNumber": {
+              "type": "VARIABLE",
+              "variableName": "nmbLineError"
+            }
+          }
+        }
+      ],
+      "disabled": false
+    }
+  ],
+  "variables": [
+    {
+      "type": "NUMBER",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleNumber"
+    },
+    {
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "name": "SampleString"
+    },
+    {
+      "name": "strStatus",
+      "type": "STRING",
+      "subtype": "UNDEFINED",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    },
+    {
+      "name": "dicConfig",
+      "type": "DICTIONARY",
+      "subtype": "STRING",
+      "sessionType": "",
+      "input": false,
+      "output": false,
+      "constant": false
+    },
+    {
+      "name": "strRutaConfig",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": "C:\\PruebaTecnicaTCC\\Config\\Config.xlsx"
+      }
+    },
+    {
+      "name": "ErrorMessage",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "strMensajeError",
+      "description": "",
+      "type": "STRING",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "STRING",
+        "string": ""
+      }
+    },
+    {
+      "name": "nmbLineError",
+      "description": "",
+      "type": "NUMBER",
+      "readOnly": false,
+      "input": false,
+      "output": false,
+      "defaultValue": {
+        "type": "NUMBER",
+        "number": "0"
+      }
+    }
+  ],
+  "packages": [
+    {
+      "name": "Comment",
+      "version": "2.17.0",
+      "settingsAttributes": []
+    },
+    {
+      "name": "ErrorHandler",
+      "version": "2.13.0-20241115-120032",
+      "settingsAttributes": []
+    },
+    {
+      "name": "If",
+      "version": "3.8.0-20241115-115929",
+      "settingsAttributes": []
+    },
+    {
+      "name": "MessageBox",
+      "version": "3.8.1",
+      "settingsAttributes": []
+    },
+    {
+      "name": "Number",
+      "version": "3.11.3",
+      "settingsAttributes": []
+    },
+    {
+      "name": "String",
+      "version": "5.12.2",
+      "settingsAttributes": []
+    },
+    {
+      "name": "TaskBot",
+      "version": "2.10.0-20241119-100739",
+      "settingsAttributes": []
+    }
+  ],
+  "properties": {
+    "botCodeVersion": "7",
+    "improvedNumberSupport": true,
+    "timeout": "0s",
+    "automationPriority": "PRIORITY_MEDIUM",
+    "runInChildWindow": false,
+    "runInChildWindowMode": "DESKTOP"
+  },
+  "workItemTemplateName": null
+}
